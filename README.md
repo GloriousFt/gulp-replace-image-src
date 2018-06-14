@@ -84,5 +84,3 @@ Type:`Boolean`
 Default:`false`
 
 If the value is `true`, then the new "src" is prepended to the origin "src".
-
-## License
