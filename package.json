@@ -1,6 +1,6 @@
 {
   "name": "gulp-replace-image-src",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "replace the \"src\" attribute with specific path of \"img\" tags in HTML files",
   "main": "index.js",
   "dependencies": {
