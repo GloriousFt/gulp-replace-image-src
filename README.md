@@ -1,4 +1,4 @@
-# gulp-replace-image-src
+# gulp-replace-image-src [![Build Status](https://travis-ci.org/GloriousFt/gulp-replace-image-src.svg?branch=master)](https://travis-ci.org/GloriousFt/gulp-replace-image-src)
 
 > Replace the \"src\" attribute of \<img\> tags with specific path in HTML files. 
 
