@@ -9,14 +9,13 @@ module.exports = function(opts) {
     var keepOrigin = false;
     if (opts) {
         prependSrc = opts.prependSrc || '/';
-        keepOrigin = opts.keepOrigin;
+        keepOrigin = opts.keepOrigin || false;
     }
 
     return through.obj(function(file, enc, callback) {
 
         if (file.isNull()) {
             this.push(file);
-            // do nothing if no contents
             return callback();
         }
 

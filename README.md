@@ -28,15 +28,15 @@ gulp.task('replace', function() {
 The original HTML is like:
 ```html
 <body>
-    <div class="icon1"><img src="/public/icon4.png" /></div>
-    <div class="icon1_1"><img src="../icon4-1.png" /></div>
+  <div class="icon1"><img src="/public/icon4.png" /></div>
+  <div class="icon1_1"><img src="../icon4-1.png" /></div>
 </body>
 ```
 After replaced, it should be like:
 ```html
 <body>
-    <div class="icon1"><img src="//github.cdn.com/images/icon4.png" /></div>
-    <div class="icon1_1"><img src="//github.cdn.com/images/icon4-1.png" /></div>
+  <div class="icon1"><img src="//github.cdn.com/images/icon4.png" /></div>
+  <div class="icon1_1"><img src="//github.cdn.com/images/icon4-1.png" /></div>
 </body>
 ```
 The plugin only keeps the original file name in the new path.
@@ -59,10 +59,12 @@ gulp.task('replace', function() {
 Then you will see the below HTML:
 ```html
 <body>
-    <div class="icon1"><img src="//github.cdn.com/images/public/icon4.png" /></div>
-    <div class="icon1_1"><img src="//github.cdn.com/images/../icon4-1.png" /></div>
+  <div class="icon1"><img src="//github.cdn.com/images/public/icon4.png" /></div>
+  <div class="icon1_1"><img src="//github.cdn.com/images/../icon4-1.png" /></div>
 </body>
 ```
+
+If the "src" starts with **"http:|ftp:|https:|//"**, then it will **NOT** be replaced.
 ## API
 
 ### replace(options)
